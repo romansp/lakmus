@@ -2,15 +2,15 @@ import { getMemberNameFromSelector } from "../src/utils";
 
 var description = "utils spec.";
 var funcs = [
-    function (instance) { return instance.InstanceId; },
-    function (instance) { return instance.InstanceId; },
-    function (instance) { return instance.InstanceId;  },
-    function (instance) { return instance.InstanceId},
-    function (instance) { return instance.InstanceId },
-    function (instance) { return instance.InstanceId; },
-    function(instance){return instance.InstanceId},
-    function(instance){return (instance.InstanceId);},
-    function(instance){return (instance.InstanceId);;},
+    function (instance: { InstanceId: any; }) { return instance.InstanceId; },
+    function (instance: { InstanceId: any; }) { return instance.InstanceId; },
+    function (instance: { InstanceId: any; }) { return instance.InstanceId;  },
+    function (instance: { InstanceId: any; }) { return instance.InstanceId},
+    function (instance: { InstanceId: any; }) { return instance.InstanceId },
+    function (instance: { InstanceId: any; }) { return instance.InstanceId; },
+    function(instance: { InstanceId: any; }){return instance.InstanceId},
+    function(instance: { InstanceId: any; }){return (instance.InstanceId);},
+    function(instance: { InstanceId: any; }){return (instance.InstanceId);;},
     // Simulates es6 arrow functions
     "instance => instance.InstanceId" as any,
     "instance =>instance.InstanceId" as any,

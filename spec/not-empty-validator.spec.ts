@@ -1,5 +1,5 @@
 import { NotEmptyValidator } from "../src/validators/not-empty.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Not empty validator spec.";
 

@@ -1,5 +1,5 @@
 import { CreditCardValidator } from "../src/validators/credit-card.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Credit card validator spec.";
 

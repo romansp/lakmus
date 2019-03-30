@@ -1,5 +1,5 @@
 import { GreaterThanValidator } from "../src/validators/greater-than.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Greater than validator spec.";
 

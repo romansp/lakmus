@@ -1,5 +1,5 @@
 import { ExclusiveBetweenValidator } from "../src/validators/exclusive-between.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Exclusive between validator spec.";
 

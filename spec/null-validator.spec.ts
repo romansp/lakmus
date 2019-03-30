@@ -1,5 +1,5 @@
 import { NullValidator } from "../src/validators/null.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester, } from "./property-validator-tester";
 
 var description = "Null validator spec.";
 

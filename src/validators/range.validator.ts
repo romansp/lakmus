@@ -3,8 +3,8 @@ import { ValidationContext } from "../validation-context";
 
 export abstract class RangeValidator extends PropertyValidator {
     private inclusive: boolean;
-	private min: number;
-	private max: number;
+	private min?: number;
+	private max?: number;
 
     constructor(min?: number, max?: number, inclusive = true, errorMessage?: string) {
         super(errorMessage);

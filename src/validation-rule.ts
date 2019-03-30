@@ -6,13 +6,15 @@ import { LanguageManager } from "./localization/language-manager";
 import { ValidatorOptions } from "./validator-options";
 
 /** Defines a rule associated with a property which can have multiple validators. */
-export class ValidationRule<TInstance, TProperty> {
+export class ValidationRule<TInstance extends { [key: string]: TProperty }, TProperty> {
 
     /** Collection validators to apply. */
     public collectionValidators: Validator<any>[] = [];
 
     /** Property name. */
     public propertyName: string;
+
+    public propertySelector: (instance: TInstance) => TProperty;
 
     /** Property name to display in error message. */
     public propertyDisplayName: string;
@@ -30,9 +32,10 @@ export class ValidationRule<TInstance, TProperty> {
      * Initializes a new instance of the ValidationRule class.
      * @param name Property name.
      */
-    constructor(name: string) {
+    constructor(name: string, propertySelector: (instance: TInstance) => TProperty) {
         this.propertyDisplayName = ValidatorOptions.propertyNameResolver(name);
         this.propertyName = name;
+        this.propertySelector = propertySelector;
     }
 
     /**
@@ -56,12 +59,7 @@ export class ValidationRule<TInstance, TProperty> {
 
         var value = this.getValue(instance);
 
-        var context = new ValidationContext();
-
-        context.instance = instance;
-        context.propertyDisplayName = this.propertyDisplayName;
-        context.propertyName = this.propertyName;
-        context.propertyValue = value;
+        var context = new ValidationContext(instance, value, this.propertyName, this.propertyDisplayName);
 
         if (this.collectionValidators != null) {
             this.collectionValidators.forEach((collectionValidator) => {
@@ -124,14 +122,6 @@ export class ValidationRule<TInstance, TProperty> {
     }
 
     private getValue(instance: TInstance): TProperty {
-        var value = instance[this.propertyName];
-
-        // if (window) {
-        //     if (window["ko"]) {
-        //         value = window["ko"].unwrap(value);
-        //     }
-        // }
-
-        return value;
+        return this.propertySelector(instance);
     }
 }

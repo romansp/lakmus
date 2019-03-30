@@ -2,9 +2,13 @@
 import { LanguageManager } from "../localization/language-manager";
 import { ValidatorOptions } from "../validator-options";
 
-export abstract class PropertyValidator {
-    public errorMessage: string;
-    public errorMessageResourceName: string;
+type Indexer<T> = { [ key: string ]: T };
+
+export abstract class PropertyValidator implements Indexer<string> {
+    [key: string]: any;
+    
+    public errorMessage?: string;
+    public errorMessageResourceName?: string;
 
     constructor(errorMessage?: string) {
         this.errorMessage = errorMessage;

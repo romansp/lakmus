@@ -1,5 +1,4 @@
 import { PredicateValidator } from "../src/validators/predicate.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
 import { ValidationContext } from "../src/validation-context";
 
 var description = "Predicate validator spec.";
@@ -8,7 +7,7 @@ var customer = {
     hasDiscount: true
 };
 
-let validator = new PredicateValidator((value, instance) => instance["hasDiscount"]);
+let validator = new PredicateValidator((_value, instance) => instance["hasDiscount"]);
 let validationContext = new ValidationContext();
 validationContext.instance = customer;
 validationContext.propertyValue = customer.id;

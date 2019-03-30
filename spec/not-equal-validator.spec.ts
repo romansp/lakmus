@@ -1,5 +1,5 @@
 import { NotEqualValidator } from "../src/validators/not-equal.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Not equal validator spec.";
 

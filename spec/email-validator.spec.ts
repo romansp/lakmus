@@ -1,5 +1,5 @@
 import { EmailValidator } from "../src/validators/email.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Email validator spec.";
 

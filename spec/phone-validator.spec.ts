@@ -1,5 +1,5 @@
 import { PhoneValidator } from "../src/validators/phone.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Phone validator spec.";
 

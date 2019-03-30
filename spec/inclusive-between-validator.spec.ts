@@ -1,5 +1,5 @@
 import { InclusiveBetweenValidator } from "../src/validators/inclusive-between.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Inclusive between validator spec.";
 

@@ -3,7 +3,6 @@ import { Validator } from "./validator";
 import { PropertyValidator } from "./validators/property-validator";
 import { CreditCardValidator } from "./validators/credit-card.validator";
 import { EmailValidator } from "./validators/email.validator";
-import { EmptyValidator } from "./validators/empty.validator";
 import { EqualValidator } from "./validators/equal.validator";
 import { ExactLengthValidator } from "./validators/exact-length.validator";
 import { ExclusiveBetweenValidator } from "./validators/exclusive-between.validator";
@@ -20,7 +19,6 @@ import { NotNullValidator } from "./validators/not-null.validator";
 import { NullValidator } from "./validators/null.validator";
 import { PhoneValidator } from "./validators/phone.validator";
 import { PredicateValidator } from "./validators/predicate.validator";
-import { RangeValidator } from "./validators/range.validator";
 import { RegularExpressionValidator } from "./validators/regular-expression.validator";
 import { UriValidator } from "./validators/uri.validator";
 

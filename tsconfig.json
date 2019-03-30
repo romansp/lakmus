@@ -3,14 +3,18 @@
         "target": "es5",
         "module": "commonjs",
         "inlineSourceMap": true,
-        "declaration": true
+        "declaration": true,
+        "strict": true,
+        "noImplicitAny": true ,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
     },
-    "include": [
-        "./index.ts",
-        "./src/**/*",
-        "./spec/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
 }

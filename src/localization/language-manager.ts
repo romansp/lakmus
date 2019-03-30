@@ -5,7 +5,7 @@ import { LanguageResources } from "./language-resources";
  */
 export class LanguageManager {
     /** List of registered languages. */
-    public static registeredLanguages: { [language: string]: LanguageResources } = {};
+    public static registeredLanguages: { [language: string]: LanguageResources | undefined } = {};
 
     /**
      * Registers a list of localized messages for the specified language.
@@ -22,7 +22,7 @@ export class LanguageManager {
      * @param language Language.
      * @params Message format parameters.
      */
-    public static getLocalizedMessage(resourceName: string, language: string, params?: { [name: string]: any }): string {
+    public static getLocalizedMessage(resourceName: string, language: string, params?: { [name: string]: any }) {
         var resources = LanguageManager.registeredLanguages[language];
 
         if (resources == null) {
@@ -36,9 +36,12 @@ export class LanguageManager {
         }
 
         if (params != null) {
-            Object.getOwnPropertyNames(params).forEach((propertyName) => {
-                message = message.replace("{" + propertyName + "}", params[propertyName]);
-            });
+            if (typeof message === "string") {
+                const msg = message;
+                Object.getOwnPropertyNames(params).forEach((propertyName) => {
+                    message = msg.replace("{" + propertyName + "}", params[propertyName]);
+                });
+            }
         }
 
         return message;

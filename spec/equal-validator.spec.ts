@@ -1,5 +1,5 @@
 import { EqualValidator } from "../src/validators/equal.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Equal validator spec.";
 

@@ -1,5 +1,5 @@
 import { ExactLengthValidator } from "../src/validators/exact-length.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Exact length validator spec.";
 

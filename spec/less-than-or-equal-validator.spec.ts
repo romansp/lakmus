@@ -1,5 +1,5 @@
 import { LessThanOrEqualValidator } from "../src/validators/less-than-or-equal.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Less than or equal validator spec.";
 

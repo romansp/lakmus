@@ -5,7 +5,7 @@ export class ValidationError {
     public errorMessage: string;
 
     /** Property name. */
-    public propertyName: string;
+    public propertyName?: string;
 
     /**
      * Initializes a new instance of the ValidationError class.

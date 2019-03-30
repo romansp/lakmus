@@ -1,5 +1,5 @@
 import { MaxLengthValidator } from "../src/validators/max-length.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Max length validator spec.";
 

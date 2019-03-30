@@ -1,6 +1,5 @@
 import { PropertyValidator } from "./property-validator";
 import { ValidationContext } from "../validation-context";
-import { Validator } from "../validator";
 import { isNullOrWhitespace } from "../utils";
 
 export class NotEmptyValidator extends PropertyValidator {

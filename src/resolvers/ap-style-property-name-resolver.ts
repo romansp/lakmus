@@ -5,12 +5,12 @@ import PropertyNameResolver from "./property-name-resolver";
  * @param name Property name.
  */
 var ApStyleTitleCasePropertyNameResolver: PropertyNameResolver = (name: string): string => {
-    if (!name) return null
-    if (!name.length) return null
+    if (!name) return ""
+    if (!name.length) return ""
 
     const stopwords = 'a an and at but by for in nor of on or so the to up yet'.split(' ')
 
-    function capitalize(str) {
+    function capitalize(str: string) {
         return str.charAt(0).toUpperCase() + str.slice(1)
     }
 

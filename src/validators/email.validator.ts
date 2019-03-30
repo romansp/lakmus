@@ -1,7 +1,5 @@
 import { PropertyValidator } from "./property-validator";
-import { Validator } from "../validator";
 import { ValidationContext } from "../validation-context";
-import { countDigits, isNullOrWhitespace } from "../utils";
 
 export class EmailValidator extends PropertyValidator {
     constructor(errorMessage?: string) {

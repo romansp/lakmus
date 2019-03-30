@@ -1,5 +1,5 @@
 import { MinLengthValidator } from "../src/validators/min-length.validator";
-import { PropertyValidatorTester, PropertyValidatorTestCase } from "./property-validator-tester";
+import { PropertyValidatorTester } from "./property-validator-tester";
 
 var description = "Min length validator spec.";
 

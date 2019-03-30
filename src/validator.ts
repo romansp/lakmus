@@ -10,9 +10,9 @@ import "./localization/ru";
 /** 
  * Defines a validator for a particular type.
  */
-export abstract class Validator<T> {
+export abstract class Validator<T extends { [key: string]: any }> {
     private _rules: ValidationRule<T, any>[] = [];
-    private _when: { (instance: T): boolean };
+    private _when: { (instance: T): boolean } | null = null;
 
 
     /**
@@ -59,7 +59,7 @@ export abstract class Validator<T> {
     protected ruleFor<TProperty>(propertySelector: (instance: T) => TProperty): ValidationRuleConfigurator<T, TProperty> {
         var propertyName = getMemberNameFromSelector(propertySelector);
 
-        var rule = new ValidationRule<T, TProperty>(propertyName);
+        var rule = new ValidationRule<T, TProperty>(propertyName, propertySelector);
         this._rules.push(rule);
 
         var configurator = new ValidationRuleConfigurator<T, TProperty>(rule);
