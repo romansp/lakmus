@@ -4,13 +4,7 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "src/**/*.d.ts": true,
-        "spec/**/*.d.ts": true,
-        "**/*.js": {
-            "when": "$(basename).ts"
-        },
-        "**/*.js.map": {
-            "when": "$(basename)"
-        }
-    }
+        "**/.rpt2_cache": true
+    },
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }
